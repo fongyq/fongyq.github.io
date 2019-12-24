@@ -1,1 +1,1 @@
-# front cover jekyll theme
+[HomePage](https://fongyq.github.io)
