@@ -57,8 +57,8 @@ li {
     justify-content: center;
     align-items: center;
     list-style: none;
-    width: 65px;
-    height: 65px;
+    width: 5em;
+    height: 5em;
 }
 li:hover {
     color: white;
@@ -76,8 +76,6 @@ a {
     justify-content: center;
     align-items: center;
     list-style: none;
-    width: 65px;
-    height: 65px;
 }
 .description {
     display: none;
