@@ -15,7 +15,7 @@ permalink: /
         {% endif %}
         <link rel="stylesheet" href="{{ "css/front.css" | prepend: site.baseurl }}">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     </head>
     <body>
         <div class="content">
@@ -31,7 +31,7 @@ permalink: /
             <h3>{{ site.description }}</h3>
 
                 <ul>
-                    {% if site.github_username %}
+                    <!-- {% if site.github_username %}
                     <li><a class="fa fa-2x fa-github" href="https://github.com/{{ site.github_username }}"><span class="description">GitHub</span></a></li>
                     {% endif %}
 
@@ -51,9 +51,6 @@ permalink: /
                     <li><a class="fa fa-2x fa-twitter" href="https://twitter.com/{{ site.twitter_username }}"><span class="description">Twitter</span></a></li>
                     {% endif %}
 
-                    <!-- {% if site.google_plus_username %}
-                    <li><a class="fa fa-2x fa-google-plus" href="https://plus.google.com/+{{ site.google_plus_username }}"><span class="description">Google +</span></a></li>
-                    {% endif %} -->
                     {% if site.google_plus_username %}
                     <li><a class="fa fa-2x fa-search" href="https://www.google.com.hk/"><span class="description">Google</span></a></li>
                     {% endif %}
@@ -106,9 +103,6 @@ permalink: /
                     <li><a class="fa fa-2x fa-weibo" href="https://weibo.com/{{ site.weibo_username }}"><span class="description">微博</span></a></li>
                     {% endif %}
 
-                    <!-- {% if site.blog_url %}
-                    <li><a class="fa fa-2x fa-tags" href="{{ site.baseurl }}{{ site.blog_url }}"><span class="description">Blog</span></a></li>
-                    {% endif %} -->
                     {% if site.blog_url %}
                     <li><a class="fa fa-2x fa-home" href="https://fongyq.github.io/blog/"><span class="description">Docs</span></a></li>
                     {% endif %}
@@ -119,8 +113,15 @@ permalink: /
 
                     {% if site.public_key_url %}
                     <li><a class="fa fa-2x fa-key" href="{{ site.public_key_url }}"><span class="description">PGP Key</span></a></li>
-                    {% endif %}
+                    {% endif %} -->
+
+                    <li><a title="docs" class="fas fa-book fa-2x" href="https://fongyq.github.io/blog/"></a></li>
+                    <li><a title="diff" class="fa-solid fa-code-compare fa-2x" href="https://fongyq.github.io/diff/"></a></li>
+                    <li><a title="pyrun" class="fa-brands fa-python fa-2x" href="https://fongyq.github.io/pyrun/"></a></li>
+                    <li><a title="jsonview" class="fab fa-js-square fa-2x" href="https://fongyq.github.io/jsonview/"></a></li>
                 </ul>
+
+                <button class="invisible_button" ondblclick="window.open('https://fongyq.github.io/note', '_blank')"></button>
         </div>
 
     </body>
