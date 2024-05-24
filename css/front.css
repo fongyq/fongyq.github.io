@@ -81,6 +81,23 @@ a {
     display: none;
 }
 
+.popup {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 45vh;
+    left: 45vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Menlo, 'Droid Sans Mono', Consolas, monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    border: none; 
+}
+
 
 @media (max-width: 450px) {
 ul {
