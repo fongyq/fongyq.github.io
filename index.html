@@ -115,11 +115,11 @@ permalink: /
                     <li><a class="fa fa-2x fa-key" href="{{ site.public_key_url }}"><span class="description">PGP Key</span></a></li>
                     {% endif %} -->
 
-                    <li><a class="fas fa-book fa-4x" href="https://www.fangyq.cn/docs/" target="_blank" onmouseover="popInfo('docs', 'l1')" id="l1"></a></li>
-                    <li><a class="fa-solid fa-code-compare fa-4x" href="https://www.fangyq.cn/diff/" target="_blank" onmouseover="popInfo('diff', 'l2')" id="l2"></a></li>
-                    <li><a class="fa-brands fa-python fa-4x" href="https://www.fangyq.cn/pyrun/" target="_blank" onmouseover="popInfo('pyrun', 'l3')" id="l3"></a></li>
-                    <li><a class="fab fa-js-square fa-4x" href="https://www.fangyq.cn/json/" target="_blank" onmouseover="popInfo('json', 'l4')" id="l4"></a></li>
-                    <li><a class="fa-solid fa-eye-dropper fa-4x" href="https://www.fangyq.cn/color/" target="_blank" onmouseover="popInfo('color', 'l5')" id="l5"></a></li>
+                    <li><a class="fas fa-book fa-4x" href="https://www.fangyq.cn/docs/" target="_blank" onmouseenter="popInfo('docs', 'l1')" onmouseleave="popHide()" id="l1"></a></li>
+                    <li><a class="fa-solid fa-code-compare fa-4x" href="https://www.fangyq.cn/diff/" target="_blank" onmouseenter="popInfo('diff', 'l2')" onmouseleave="popHide()" id="l2"></a></li>
+                    <li><a class="fa-brands fa-python fa-4x" href="https://www.fangyq.cn/pyrun/" target="_blank" onmouseenter="popInfo('pyrun', 'l3')" onmouseleave="popHide()" id="l3"></a></li>
+                    <li><a class="fab fa-js-square fa-4x" href="https://www.fangyq.cn/json/" target="_blank" onmouseenter="popInfo('json', 'l4')" onmouseleave="popHide()" id="l4"></a></li>
+                    <li><a class="fa-solid fa-eye-dropper fa-4x" href="https://www.fangyq.cn/color/" target="_blank" onmouseenter="popInfo('color', 'l5')" onmouseleave="popHide()" id="l5"></a></li>
                 </ul>
 
                 <button style="opacity:0;position:absolute;border-radius:10px;top:25vh;left:5vw;width:15vw;height:15vw;" onmouseover="this.style.cursor='pointer'" ondblclick="window.open('https://www.fangyq.cn/note', '_blank')"></button>
@@ -139,9 +139,12 @@ permalink: /
             var ppRect = popup.getBoundingClientRect();
             popup.style.top = boxRect.bottom + 20 + "px";
             popup.style.left = boxRect.left - (ppRect.width - boxRect.width) / 2 + "px";
-            setTimeout(() => {
-                popup.style.display = 'none';
-            }, 1000);
+            // setTimeout(() => {
+            //     popup.style.display = 'none';
+            // }, 1000);
+        }
+        function popHide() {
+            document.getElementById("popup-info").style.display = 'none';
         }
     </script>
 </html>
