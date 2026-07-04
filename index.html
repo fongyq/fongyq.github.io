@@ -139,7 +139,7 @@ permalink: /
                     <li><a href="https://www.fangyq.cn/games/" target="_blank" onmouseenter="popInfo('games', this)" onmouseleave="popHide()" id="l8">
                         <i class="fa-solid fa-gamepad fa-4x"></i>
                     </a></li>
-                    <li><a href="https://www.fangyq.cn/flowers/" target="_blank" onmouseenter="popInfo('flowers', this)" onmouseleave="popHide()" id="l8">
+                    <li><a href="https://www.fangyq.cn/flowers/" target="_blank" onmouseenter="popInfo('flowers', this)" onmouseleave="popHide()" id="l9">
                         <i class="fa-solid fa-plant-wilt fa-4x"></i>
                     </a></li>
                 </ul>
@@ -155,11 +155,14 @@ permalink: /
         function popInfo(info, box) {
             var boxRect = box.getBoundingClientRect();
             var popup = document.getElementById("popup-info");
-            popup.style.display = 'flex';
             popup.innerText = info;
+            popup.style.display = 'flex';
             var ppRect = popup.getBoundingClientRect();
-            popup.style.top = boxRect.bottom + 20 + "px";
-            popup.style.left = boxRect.left - (ppRect.width - boxRect.width) / 2 + "px";
+            var top = boxRect.bottom + 20;
+            var left = boxRect.left + (boxRect.width - ppRect.width) / 2;
+            left = Math.max(8, Math.min(left, window.innerWidth - ppRect.width - 8));
+            popup.style.top = top + "px";
+            popup.style.left = left + "px";
             // setTimeout(() => {
             //     popup.style.display = 'none';
             // }, 1000);
